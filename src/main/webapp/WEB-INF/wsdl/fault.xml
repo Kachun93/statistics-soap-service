@@ -1,0 +1,5 @@
+<faul:statisticsFault xmlns:faul="http://nl.hu.iac/statistics-service/fault" xmlns:stat="http://nl.hu.iac/statistics-service/statistics-types">
+  <stat:errorCode>1</stat:errorCode>
+  <!--Optional:-->
+  <stat:message>string</stat:message>
+</faul:statisticsFault>

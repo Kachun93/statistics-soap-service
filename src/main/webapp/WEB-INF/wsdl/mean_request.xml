@@ -1,0 +1,3 @@
+<mean:meanRequest xmlns:mean="http://nl.hu.iac/statistics-service/mean-request" xmlns:stat="http://nl.hu.iac/statistics-service/statistics-types">
+  <stat:doubleList>1.051732E7 1.051732E7</stat:doubleList>
+</mean:meanRequest>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	name="StatisticsService"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:mrq="http://nl.hu.iac/statistics-service/mean-request"
+	xmlns:mrs="http://nl.hu.iac/statistics-service/mean-response"
+    xmlns:vrq="http://nl.hu.iac/statistics-service/variance-request"
+    xmlns:vrs="http://nl.hu.iac/statistics-service/variance-response"
+	xmlns:srq="http://nl.hu.iac/statistics-service/standard-deviation-request"
+	xmlns:srs="http://nl.hu.iac/statistics-service/standard-deviation-response"
+    xmlns:lrq="http://nl.hu.iac/statistics-service/last-result-request"
+    xmlns:lrs="http://nl.hu.iac/statistics-service/last-result-response"
+	xmlns:flt="http://nl.hu.iac/statistics-service/fault"
+	xmlns="http://nl.hu.iac/statistics-service/wsdl/"
+	targetNamespace="http://nl.hu.iac/statistics-service/wsdl/">
+	<wsdl:types>
+		<xsd:schema>
+            <xsd:import namespace="http://nl.hu.iac/statistics-service/mean-request"
+                        schemaLocation="mean_request.xsd"/>
+            <xsd:import namespace="http://nl.hu.iac/statistics-service/mean-response"
+                        schemaLocation="mean_response.xsd"/>
+            <xsd:import namespace="http://nl.hu.iac/statistics-service/variance-request"
+                        schemaLocation="variance_request.xsd"/>
+            <xsd:import namespace="http://nl.hu.iac/statistics-service/variance-response"
+                        schemaLocation="variance_response.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/statistics-service/standard-deviation-request"
+						schemaLocation="standard_deviation_request.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/statistics-service/standard-deviation-response"
+						schemaLocation="standard_deviation_response.xsd"/>
+            <xsd:import namespace="http://nl.hu.iac/statistics-service/last-result-request"
+                        schemaLocation="last_result_request.xsd"/>
+            <xsd:import namespace="http://nl.hu.iac/statistics-service/last-result-response"
+                        schemaLocation="last_result_response.xsd"/>
+			<xsd:import namespace="http://nl.hu.iac/statistics-service/fault"
+						schemaLocation="fault.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+    <wsdl:message name="meanRequest">
+        <wsdl:part name="request" element="mrq:meanRequest"/>
+    </wsdl:message>
+    <wsdl:message name="meanResponse">
+        <wsdl:part name="response" element="mrs:meanResponse"/>
+    </wsdl:message>
+    <wsdl:message name="varianceRequest">
+        <wsdl:part name="request" element="vrq:varianceRequest"/>
+    </wsdl:message>
+    <wsdl:message name="varianceResponse">
+        <wsdl:part name="response" element="vrs:varianceResponse"/>
+    </wsdl:message>
+	<wsdl:message name="standardDeviationRequest">
+		<wsdl:part name="request" element="srq:standardDeviationRequest"/>
+	</wsdl:message>
+	<wsdl:message name="standardDeviationResponse">
+		<wsdl:part name="response" element="srs:standardDeviationResponse"/>
+	</wsdl:message>
+    <wsdl:message name="lastResultRequest">
+        <wsdl:part name="request" element="lrq:lastResultRequest"/>
+    </wsdl:message>
+    <wsdl:message name="lastResultResponse">
+        <wsdl:part name="response" element="lrs:lastResultResponse"/>
+    </wsdl:message>
+	<wsdl:message name="fault">
+		<wsdl:part name="fault" element="flt:statisticsFault"/>
+	</wsdl:message>
+	<wsdl:portType name="statisticsServiceInterface">
+        <wsdl:operation name="calculateMean">
+            <wsdl:input message="meanRequest"/>
+            <wsdl:output message="meanResponse"/>
+            <wsdl:fault name="fault" message="fault"/>
+        </wsdl:operation>
+		<wsdl:operation name="calculateVariance">
+			<wsdl:input message="varianceRequest"/>
+			<wsdl:output message="varianceResponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+        <wsdl:operation name="calculateStandardDeviation">
+            <wsdl:input message="standardDeviationRequest"/>
+            <wsdl:output message="standardDeviationResponse"/>
+			<wsdl:fault name="fault" message="fault"/>
+		</wsdl:operation>
+        <wsdl:operation name="getLastResult">
+            <wsdl:input message="lastResultRequest"/>
+            <wsdl:output message="lastResultResponse"/>
+            <wsdl:fault name="fault" message="fault"/>
+        </wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="statisticsServiceBinding" type="statisticsServiceInterface">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="calculateMean">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="fault">
+				<soap:fault name="fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+        <wsdl:operation name="calculateVariance">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="calculateStandardDeviation">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getLastResult">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="fault">
+                <soap:fault name="fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="statisticsServiceService">
+		<wsdl:port name="WS-Port" binding="statisticsServiceBinding">
+			<soap:address location="http://localhost:8080/ws-producer/soap"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

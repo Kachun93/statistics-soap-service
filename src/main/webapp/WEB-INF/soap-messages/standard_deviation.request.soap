@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stan="http://nl.hu.iac/statistics-service/standard-deviation-request" xmlns:stat="http://nl.hu.iac/statistics-service/statistics-types">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <stan:standardDeviationRequest>
+            <stat:doubleList>1 2 3 4 5</stat:doubleList>
+        </stan:standardDeviationRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

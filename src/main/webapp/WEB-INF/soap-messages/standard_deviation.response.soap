@@ -1,0 +1,7 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns5:standardDeviationResponse xmlns="http://nl.hu.iac/statistics-service/statistics-types" xmlns:ns2="http://nl.hu.iac/statistics-service/mean-response" xmlns:ns3="http://nl.hu.iac/statistics-service/standard-deviation-request" xmlns:ns4="http://nl.hu.iac/statistics-service/mean-request" xmlns:ns5="http://nl.hu.iac/statistics-service/standard-deviation-response" xmlns:ns6="http://nl.hu.iac/statistics-service/last-result-request" xmlns:ns7="http://nl.hu.iac/statistics-service/last-result-response" xmlns:ns8="http://nl.hu.iac/statistics-service/variance-response" xmlns:ns9="http://nl.hu.iac/statistics-service/variance-request" xmlns:ns10="http://nl.hu.iac/statistics-service/fault">
+            <result>1.5811388300841898</result>
+        </ns5:standardDeviationResponse>
+    </S:Body>
+</S:Envelope>

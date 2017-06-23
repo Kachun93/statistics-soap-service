@@ -1,0 +1,3 @@
+<var:varianceResponse xmlns:var="http://nl.hu.iac/statistics-service/variance-response" xmlns:stat="http://nl.hu.iac/statistics-service/statistics-types">
+  <stat:result>1.051732E7</stat:result>
+</var:varianceResponse>

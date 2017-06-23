@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:var="http://nl.hu.iac/statistics-service/variance-request" xmlns:stat="http://nl.hu.iac/statistics-service/statistics-types">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <var:varianceRequest>
+            <stat:doubleList>1 2 3 4 5</stat:doubleList>
+        </var:varianceRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

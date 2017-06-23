@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mean="http://nl.hu.iac/statistics-service/mean-request" xmlns:stat="http://nl.hu.iac/statistics-service/statistics-types">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <mean:meanRequest>
+            <stat:doubleList>1 2 3 4 5</stat:doubleList>
+        </mean:meanRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tp="http://nl.hu.iac/statistics-service/statistics-types"
+		elementFormDefault="qualified"
+		targetNamespace="http://nl.hu.iac/statistics-service/fault">
+
+	<import namespace="http://nl.hu.iac/statistics-service/statistics-types"
+			schemaLocation="statistics_types.xsd"/>
+
+	<element name="statisticsFault" type="tp:statisticsFault"/>
+</schema>

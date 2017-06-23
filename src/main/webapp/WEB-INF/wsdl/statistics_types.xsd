@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		elementFormDefault="qualified"
+		targetNamespace="http://nl.hu.iac/statistics-service/statistics-types">
+
+	<complexType name="request">
+		<sequence>
+            <annotation>
+                <documentation xml:lang="nl">
+                    Een lijst van kommagetallen om berekeningen op uit te voeren.
+                </documentation>
+            </annotation>
+			<element name="doubleList">
+				<simpleType>
+					<list itemType="double"/>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="response">
+		<sequence>
+            <annotation>
+                <documentation xml:lang="nl">
+                    Het resultaat van een berekening is een kommagetal.
+                </documentation>
+            </annotation>
+			<element name="result" type="double"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="empty">
+        <annotation>
+            <documentation xml:lang="nl">
+                Dit element is leeg.
+                Er zijn namelijk geen gegegens nodig voor het ophalen van het laatst berekende resultaat.
+            </documentation>
+        </annotation>
+    </complexType>
+
+    <complexType name="statisticsFault">
+        <annotation>
+            <documentation xml:lang="nl">
+                Dit element bevat een error code en een optioneel bericht.
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="errorCode" nillable="false" type="short"/>
+            <element maxOccurs="1" minOccurs="0" name="message" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

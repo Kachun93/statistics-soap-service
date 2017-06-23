@@ -1,0 +1,3 @@
+<var:varianceRequest xmlns:var="http://nl.hu.iac/statistics-service/variance-request" xmlns:stat="http://nl.hu.iac/statistics-service/statistics-types">
+  <stat:doubleList>1.051732E7 1.051732E7</stat:doubleList>
+</var:varianceRequest>

@@ -1,0 +1,6 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:last="http://nl.hu.iac/statistics-service/last-result-request">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <last:lastResultRequest/>
+    </soapenv:Body>
+</soapenv:Envelope>
